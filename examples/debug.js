@@ -9,7 +9,7 @@ bot.on("ready", async (user) => {
   console.log("There are " + topRooms.length + " available rooms.");
 
   const activeRoom = await bot.joinRoom(
-    topRooms.filter((room) => room.name.includes("24/7"))[0]
+    topRooms.filter((room) => room.name.includes("stuffy"))[0]
   );
 });
 
@@ -89,6 +89,12 @@ bot.on("newChatMsg", (msg) => {
   if (msg.content.startsWith("!ping")) {
     msg.room.sendChatMessage("Pong!" + msg.content.substring(5));
     msg.user.sendWhisper("Pong!" + msg.content.substring(5));
+  } else if (msg.content == "!pause") {
+    if (msg.room.audioConnection) {
+      const dispatcher = msg.room.audioConnection.player.dispatcher;
+      if (!dispatcher.pausedSince) dispatcher.pause();
+      else dispatcher.resume();
+    }
   }
   console.log(
     "New chat message from " + msg.user.username + ": " + msg.content
@@ -101,6 +107,18 @@ bot.on("msgDeleted", (msgId, deleter) => {
 
 bot.on("joinedAsSpeaker", async (room) => {
   console.log("Joined as speaker.");
+  const voiceConnection = await room.connect();
+  const ytdl = require("ytdl-core-discord");
+  const dispatcher = voiceConnection.play(
+    await ytdl("https://www.youtube.com/watch?v=3MQZ-aQt7Ac"),
+    {
+      type: "opus",
+    }
+  );
+  dispatcher.on("finish", () => {
+    console.log("Finished playing.");
+  });
+  dispatcher.setVolume(1.2);
 });
 
 bot.on("becameSpeaker", (room) => {

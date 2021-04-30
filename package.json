@@ -29,5 +29,11 @@
   },
   "dependencies": {
     "uuid": "^8.3.2"
+  },
+  "optionalDependencies": {
+    "@discordjs/opus": "^0.5.0",
+    "mediasoup-client": "^3.6.30",
+    "wrtc": "^0.4.7",
+    "ytdl-core-discord": "^1.3.0"
   }
 }
