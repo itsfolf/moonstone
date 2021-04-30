@@ -7,7 +7,7 @@ Ping Pong Example
 -----------------
 
 ```js
-const Moonstone = require("moonstone");
+const Moonstone = require("moonstone-wrapper");
 
 var bot = new Moonstone("TOKEN"); // Replace TOKEN with your bot account's token
 
