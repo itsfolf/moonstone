@@ -1,8 +1,10 @@
-# Moonstone
+Moonstone [![NPM version](https://img.shields.io/npm/v/moonstone-wrapper.svg?style=flat-square&color=informational)](https://npmjs.com/package/moonstone-wrapper)
+====
 
 A simple dogehouse.tv API wrapper
 
-## Ping Pong Example
+Ping Pong Example
+-----------------
 
 ```js
 const Moonstone = require("moonstone");

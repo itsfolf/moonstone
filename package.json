@@ -1,5 +1,5 @@
 {
-  "name": "moonstone",
+  "name": "moonstone-wrapper",
   "version": "0.0.1",
   "description": "A dogehouse.tv API wrapper",
   "main": "index.js",
