@@ -8,9 +8,10 @@ bot.on("ready", async (user) => {
   console.log("There are " + topRooms.length + " available rooms.");
 
   const foundRooms = topRooms.filter(
-    (room) => room.creatorId == "ae738cee-f431-4033-b0da-025d44fce6b8"
+    (room) => room.creatorId == "ae738cee-f431-4033-b0da-025d44fce6b8" // Filter for rooms created by a specific user
   );
 
+  // If the filter found a room, join it, otherwise create one.
   const room =
     foundRooms.length > 0
       ? foundRooms[0]
@@ -20,21 +21,33 @@ bot.on("ready", async (user) => {
             "Powered by Moonstone | https://github.com/fuwwy/moonstone",
           privacy: "public",
         });
-  await bot.joinRoom(room);
+  await bot.joinRoom(room); // Join room
 });
 
+// Send a message when first joining a room.
 bot.on("joinedRoom", async (room) => {
   await room.sendChatMessage("Hi, I'm a music bot :D");
   await room.sendChatMessage("Type !help to see all my commands.");
 });
 
+// Send message to users who join the room
 bot.on("userJoinRoom", async (user, room) => {
   await user.sendWhisper(
     "Hi, welcome to the room! Type !help to see all my commands."
   );
 });
 
+const isPlayingMusic = (room) => {
+  return (
+    room.audioConnection &&
+    room.audioConnection.player &&
+    room.audioConnection.player.dispatcher
+  );
+};
+
+// Listen for chat messages
 bot.on("newChatMsg", async (msg) => {
+  // Command parser
   if (msg.content.startsWith("!")) {
     const command = msg.content.includes(" ")
       ? msg.content.split(" ")[0]
@@ -57,29 +70,25 @@ bot.on("newChatMsg", async (msg) => {
         playFromUrl(msg.room, url);
         break;
       case "pause":
-        if (
-          msg.room.audioConnection &&
-          msg.room.audioConnection.player &&
-          msg.room.audioConnection.player.dispatcher
-        )
-          if (!msg.room.audioConnection.player.dispatcher.paused)
-            msg.room.audioConnection.player.dispatcher.pause();
-          else msg.room.audioConnection.player.dispatcher.resume();
-        else msg.room.sendChatMessage("Not playing anything.");
+        if (!isPlayingMusic(msg.room))
+          return msg.room.sendChatMessage("Not playing anything.");
+
+        if (!msg.room.audioConnection.player.dispatcher.paused)
+          msg.room.audioConnection.player.dispatcher.pause();
+        else msg.room.audioConnection.player.dispatcher.resume();
+
         break;
       case "volume":
+        if (!isPlayingMusic(msg.room))
+          return msg.room.sendChatMessage("Not playing anything.");
+
         if (args.length < 1)
           return await msg.room.sendChatMessage("Invalid volume");
         const volume = parseInt(args[0]);
         if (volume > 2 || volume < 0)
           return await msg.room.sendChatMessage("Invalid volume");
-        if (
-          !msg.room.audioConnection ||
-          !msg.room.audioConnection.player ||
-          !msg.room.audioConnection.player.dispatcher
-        )
-          return msg.room.sendChatMessage("Not playing anything.");
-        msg.room.audioConnection.player.dispatcher.setVolume(volume);
+
+        msg.room.audioConnection.player.dispatcher.setVolume(volume); // Set music volume
         break;
       default:
         await msg.room.sendChatMessage("Unknown command.");
@@ -101,11 +110,10 @@ const playFromUrl = async (room, url) => {
     stream = await ytdl(url);
   } catch (e) {
     await room.sendChatMessage("Failed to get video: " + e.message);
-    return;
   }
   if (!stream) return;
-  const audioConnection = await room.connect();
-  audioConnection.play(stream, { type: "opus" });
+  const audioConnection = await room.connect(); // Connect to the room voice server (or grab it, if already connected.)
+  audioConnection.play(stream, { type: "opus" }); // Play opus stream from youtube.
 };
 
 bot.connect();

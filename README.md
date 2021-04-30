@@ -27,3 +27,7 @@ bot.on("newChatMsg", (msg) => { // When a message is created
 
 bot.connect(); // Get the bot to connect to Dogehouse
 ```
+
+More examples can be found in [the examples folder](https://github.com/fuwwy/moonstone/tree/main/examples).
+ - [Welcomer Example](https://github.com/fuwwy/moonstone/blob/main/examples/welcomer.js)
+ - [Music Example](https://github.com/fuwwy/moonstone/blob/main/examples/music.js)
