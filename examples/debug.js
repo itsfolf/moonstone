@@ -28,7 +28,7 @@ bot.on("leftRoom", (room, wasKicked) => {
 
 bot.on("joinedAsPeer", async (room) => {
   console.log("Joined as peer.");
-  //await activeRoom.askToSpeak();
+  room.askToSpeak();
 });
 
 bot.on("handRaised", (user, room) => {
@@ -39,6 +39,7 @@ bot.on("speakerAdded", (user, room) => {
 });
 bot.on("speakerRemoved", (user, room) => {
   console.log(user.username + " is no longer a speaker.");
+  if (user.id == bot.user.id) room.askToSpeak();
 });
 
 bot.on("userLeftRoom", (user, room) => {
@@ -96,6 +97,14 @@ bot.on("newChatMsg", (msg) => {
 
 bot.on("msgDeleted", (msgId, deleter) => {
   console.log(msgId + " was deleted by " + deleter.username);
+});
+
+bot.on("joinedAsSpeaker", async (room) => {
+  console.log("Joined as speaker.");
+});
+
+bot.on("becameSpeaker", (room) => {
+  console.log("Became speaker");
 });
 
 bot.on("newTokens", (tokens) => console.log("Got new tokens", tokens));
