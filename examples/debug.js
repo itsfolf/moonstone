@@ -8,7 +8,9 @@ bot.on("ready", async (user) => {
   const topRooms = await bot.getTopRooms();
   console.log("There are " + topRooms.length + " available rooms.");
 
-  const activeRoom = await bot.joinRoom(topRooms[0]);
+  const activeRoom = await bot.joinRoom(
+    topRooms.filter((room) => room.name.includes("24/7"))[0]
+  );
 });
 
 bot.on("joinedRoom", (room) =>
@@ -32,6 +34,13 @@ bot.on("joinedAsPeer", async (room) => {
 bot.on("handRaised", (user, room) => {
   console.log(user.username + " is raising their hand.");
 });
+bot.on("speakerAdded", (user, room) => {
+  console.log(user.username + " is now a speaker");
+});
+bot.on("speakerRemoved", (user, room) => {
+  console.log(user.username + " is no longer a speaker.");
+});
+
 bot.on("userLeftRoom", (user, room) => {
   console.log(
     "User left room",
@@ -52,14 +61,17 @@ bot.on("activeSpeakerChange", (user, room) =>
   console.log(
     user.username +
       " is " +
-      (user.speaking ? "now" : "no longer") +
+      (user.voiceState.speaking ? "now" : "no longer") +
       " speaking."
   )
 );
 
 bot.on("muteChange", (user, room) =>
   console.log(
-    user.username + " is " + (user.speaking ? "now" : "no longer") + " muted."
+    user.username +
+      " is " +
+      (user.voiceState.muted ? "now" : "no longer") +
+      " muted."
   )
 );
 
@@ -67,15 +79,23 @@ bot.on("deafenChange", (user, room) =>
   console.log(
     user.username +
       " is " +
-      (user.speaking ? "now" : "no longer") +
+      (user.voiceState.deafened ? "now" : "no longer") +
       " deafened."
   )
 );
 
-bot.on("newChatMsg", (msg, author, room) => {
+bot.on("newChatMsg", (msg) => {
+  if (msg.content.startsWith("!ping")) {
+    msg.room.sendChatMessage("Pong!" + msg.content.substring(5));
+    msg.user.sendWhisper("Pong!" + msg.content.substring(5));
+  }
   console.log(
-    "New chat message from " + author.username + ": " + msg.tokens.length
+    "New chat message from " + msg.user.username + ": " + msg.content
   );
+});
+
+bot.on("msgDeleted", (msgId, deleter) => {
+  console.log(msgId + " was deleted by " + deleter.username);
 });
 
 bot.on("newTokens", (tokens) => console.log("Got new tokens", tokens));
