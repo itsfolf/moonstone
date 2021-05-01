@@ -1,6 +1,6 @@
 const Moonstone = require("../");
 
-var bot = new Moonstone(require("./auth"));
+var bot = Moonstone(require("./auth"));
 
 bot.on("ready", async (user) => {
   console.log("Ready! Logged in as " + user.username);

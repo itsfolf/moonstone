@@ -1,7 +1,7 @@
 const Moonstone = require("../");
 
 // {refreshToken: ..., accessToken: ...}
-var bot = new Moonstone(require("./auth"), { logUnhandledPackets: true });
+const bot = Moonstone(require("./auth"), { logUnhandledPackets: true });
 
 bot.on("ready", async (user) => {
   console.log("Ready! Logged in as " + user.username);

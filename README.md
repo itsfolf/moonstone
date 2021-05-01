@@ -9,7 +9,7 @@ Ping Pong Example
 ```js
 const Moonstone = require("moonstone-wrapper");
 
-var bot = new Moonstone("TOKEN"); // Replace TOKEN with your bot account's token
+var bot = Moonstone("TOKEN"); // Replace TOKEN with your bot account's token
 
 bot.on("ready", async () => { // When the bot is ready
   console.log(`Ready! Logged in as ${bot.user.username}`); // Log "Ready!"

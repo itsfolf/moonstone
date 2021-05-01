@@ -1,6 +1,6 @@
 const Moonstone = require("../");
 const ytdl = require("ytdl-core-discord");
-const bot = new Moonstone(require("./auth"));
+const bot = Moonstone(require("./auth"));
 
 bot.on("ready", async (user) => {
   console.log("Ready! Logged in as " + user.username);

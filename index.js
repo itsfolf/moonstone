@@ -1,9 +1,9 @@
 "use strict";
 
-const MoonstoneClient = require("./lib/Moonstone");
+const Client = require("./lib/Moonstone");
 
 function Moonstone(token, options) {
-  return new MoonstoneClient(token, options);
+  return new Client(token, options);
 }
 
 module.exports = Moonstone;
