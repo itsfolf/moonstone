@@ -20,6 +20,17 @@ declare namespace Moonstone {
     logUnhandledPackets?: boolean;
   }
 
+  declare type chatTokenArray = Array<{ type: string; value: string }>;
+  declare type chatMessageBuilder = {
+    text: (text: String) => chatMessageBuilder;
+    mention: (user: User) => chatMessageBuilder;
+    mentionUsername: (username: String) => chatMessageBuilder;
+    emote: (emote: String) => chatMessageBuilder;
+    emoji: (emote: String) => chatMessageBuilder;
+    link: (link: String) => chatMessageBuilder;
+    url: (link: String) => chatMessageBuilder;
+  };
+
   export class Client extends EventEmitter {
     options: ClientOptions;
     rooms: Collection<Room>;
@@ -33,7 +44,13 @@ declare namespace Moonstone {
       privacy?: "public" | "private";
     }): Promise<Room>;
     setRole(role: "raised_hand" | "listener" | "speaker"): Promise<void>;
-    sendChatMessage(content: string, whisperedTo?: [User]): Promise<void>;
+    sendChatMessage(
+      content:
+        | string
+        | ((builder: chatMessageBuilder) => chatMessageBuilder)
+        | chatTokenArray,
+      whisperedTo?: [User]
+    ): Promise<void>;
     setSpeaking(value: boolean): Promise<void>;
     on: EventListeners<this>;
   }
@@ -83,7 +100,12 @@ declare namespace Moonstone {
       isMod: Boolean;
     };
     isCreator: Boolean;
-    sendWhisper(string: content): Promise<void>;
+    sendWhisper(
+      string:
+        | content
+        | ((builder: chatMessageBuilder) => chatMessageBuilder)
+        | chatTokenArray
+    ): Promise<void>;
     setAsListener(): Promise<void>;
     setAsSpeaker(): Promise<void>;
   }
@@ -99,7 +121,12 @@ declare namespace Moonstone {
     users: Collection<ActiveUser>;
     autoSpeaker: Boolean;
     askToSpeak(): Promise<void>;
-    sendChatMessage(content: string): Promise<void>;
+    sendChatMessage(
+      content:
+        | string
+        | ((builder: chatMessageBuilder) => chatMessageBuilder)
+        | chatTokenArray
+    ): Promise<void>;
     connect(): Promise<AudioConnection>;
     audioConnection?: AudioConnection;
   }

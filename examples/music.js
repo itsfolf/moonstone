@@ -45,6 +45,14 @@ const isPlayingMusic = (room) => {
   );
 };
 
+const commandList = bot.buildChatMessage((b) =>
+  b
+    .text("Here's a list of commands:")
+    .text("!play <url> - Play a song from youtube.")
+    .text("!pause - Pause or resume the player.")
+    .text("!volume <volume> - Set the player volume (0-2)")
+);
+
 // Listen for chat messages
 bot.on("newChatMsg", async (msg) => {
   // Command parser
@@ -58,15 +66,15 @@ bot.on("newChatMsg", async (msg) => {
 
     switch (command.substring(1)) {
       case "help":
-        await msg.user.sendWhisper(
-          "Here's a list of commands:\n!play <url> - Play a song from youtube.\n!pause - Pause or resume the player.\n!volume <volume> - Set the player volume (0-2)"
-        );
+        await msg.user.sendWhisper(commandList);
         break;
       case "play":
         if (args.length < 1)
           return await msg.room.sendChatMessage("Invalid url");
         const url = args[0];
-        await msg.room.sendChatMessage("Playing " + url + "...");
+        await msg.room.sendChatMessage((b) =>
+          b.text("Playing").url(url).text("...")
+        );
         playFromUrl(msg.room, url);
         break;
       case "pause":

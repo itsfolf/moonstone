@@ -87,6 +87,14 @@ bot.on("deafenChange", (user, room) =>
 
 bot.on("newChatMsg", (msg) => {
   if (msg.content.startsWith("!ping")) {
+    const prebuiltMessage = bot.buildChatMessage((builder) =>
+      builder.text("Prebuilt").emoji("doughdoge")
+    );
+    msg.room.sendChatMessage(({ text }) => text("Pong!").mention(msg.user));
+    msg.room.sendChatMessage((builder) =>
+      builder.text("a").emoji("CoolHouse").mention(msg.user).text("pog")
+    );
+    msg.user.sendWhisper(prebuiltMessage);
     msg.room.sendChatMessage("Pong!" + msg.content.substring(5));
     msg.user.sendWhisper("Pong!" + msg.content.substring(5));
   } else if (msg.content == "!pause") {
