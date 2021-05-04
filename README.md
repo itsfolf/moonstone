@@ -1,7 +1,21 @@
 Moonstone [![NPM version](https://img.shields.io/npm/v/moonstone-wrapper.svg?style=flat-square&color=informational)](https://npmjs.com/package/moonstone-wrapper)
 ====
 
-A simple dogehouse.tv API wrapper
+A simple, standalone, [dogehouse.tv](https://dogehouse.tv/) API wrapper
+
+<!-- GETTING STARTED -->
+## Installing
+
+You will need NodeJS and NPM. To install moonstone on your local project, run:
+```
+npm install --no-optional moonstone-wrapper
+```
+**If you need audio support, remove the `--no-optional`.**
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+You can use the example from below to see how you can use moonstone.
 
 Ping Pong Example
 -----------------
@@ -31,3 +45,12 @@ bot.connect(); // Get the bot to connect to Dogehouse
 More examples can be found in [the examples folder](https://github.com/fuwwy/moonstone/tree/main/examples).
  - [Welcomer Example](https://github.com/fuwwy/moonstone/blob/main/examples/welcomer.js)
  - [Music Example](https://github.com/fuwwy/moonstone/blob/main/examples/music.js)
+
+
+## Support
+You can find me on the [DogeGarden Discord](https://discord.gg/pPaXCRrVrh) (Checkium#4508) or my own [official support server](https://discord.gg/hDj42dMhn9).
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
