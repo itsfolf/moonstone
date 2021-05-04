@@ -3,6 +3,39 @@ Moonstone [![NPM version](https://img.shields.io/npm/v/moonstone-wrapper.svg?sty
 
 A simple dogehouse.tv API wrapper
 
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you can setup your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+  
+* yarn
+```sh
+yarn install npm@latest -g
+```
+
+### Installation
+
+1. Get a free API Key at [https://api.dogehouse.tv/bot/auth](https://api.dogehouse.tv/bot/auth)
+2. 
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+You can use the example from below to see how you can use moonstone.
+
 Ping Pong Example
 -----------------
 
@@ -31,3 +64,30 @@ bot.connect(); // Get the bot to connect to Dogehouse
 More examples can be found in [the examples folder](https://github.com/fuwwy/moonstone/tree/main/examples).
  - [Welcomer Example](https://github.com/fuwwy/moonstone/blob/main/examples/welcomer.js)
  - [Music Example](https://github.com/fuwwy/moonstone/blob/main/examples/music.js)
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
