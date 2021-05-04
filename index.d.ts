@@ -188,6 +188,7 @@ declare namespace Moonstone {
         | "becameSpeaker",
       listener: (room: ActiveRoom) => void
     ): T;
+    (event: "joinedAsSpeaker", listener: (room: Room) => void): T;
     (
       event: "leftRoom",
       listener: (room: ActiveRoom, wasKicked: Boolean) => void
