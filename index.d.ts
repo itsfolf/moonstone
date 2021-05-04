@@ -52,6 +52,7 @@ declare namespace Moonstone {
       whisperedTo?: [User]
     ): Promise<void>;
     setSpeaking(value: boolean): Promise<void>;
+    createBotAccount(username: string): Promise<CreateBotReply>;
     on: EventListeners<this>;
   }
 
@@ -100,6 +101,7 @@ declare namespace Moonstone {
       isMod: Boolean;
     };
     isCreator: Boolean;
+    selfUser: User;
     sendWhisper(
       string:
         | content
@@ -231,6 +233,12 @@ declare namespace Moonstone {
     setVolumeDecibels(volume: number): void;
     setVolumeLogarithmic(volume: number): void;
   }
+
+  type CreateBotReply = {
+    apiKey?: String;
+    isUsernameTaken?: Boolean;
+    error?: String;
+  };
 }
 
 export = Moonstone;
