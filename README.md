@@ -1,34 +1,16 @@
 Moonstone [![NPM version](https://img.shields.io/npm/v/moonstone-wrapper.svg?style=flat-square&color=informational)](https://npmjs.com/package/moonstone-wrapper)
 ====
 
-A simple dogehouse.tv API wrapper
+A simple, standalone, [dogehouse.tv](https://dogehouse.tv/) API wrapper
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Installing
 
-This is an example of how you can setup your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-you will need to have [node](https://nodejs.org/) and npm or yarn to run your code.
-
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://api.dogehouse.tv/bot/auth](https://api.dogehouse.tv/bot/auth)
-2. 
-3. Install moonstone and ws NPM packages
-   ```sh
-   npm install moonstone-wrapper
-   ```
-   ```sh
-   npm install ws
-   ```
+You will need NodeJS and NPM. To install moonstone on your local project, run:
+```
+npm install --no-optional moonstone-wrapper
+```
+**If you need audio support, remove the `--no-optional`.**
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -65,26 +47,8 @@ More examples can be found in [the examples folder](https://github.com/fuwwy/moo
  - [Music Example](https://github.com/fuwwy/moonstone/blob/main/examples/music.js)
 
 
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
+## Support
+You can find me on the [DogeGarden Discord](https://discord.gg/pPaXCRrVrh) (Checkium#4508) or my own [official support server](https://discord.gg/hDj42dMhn9).
 
 <!-- LICENSE -->
 ## License
