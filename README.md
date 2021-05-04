@@ -11,16 +11,12 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+you will need to have [node](https://nodejs.org/) and npm or yarn to run your code.
+
 * npm
   ```sh
   npm install npm@latest -g
   ```
-  
-* yarn
-```sh
-yarn install npm@latest -g
-```
 
 ### Installation
 
@@ -28,7 +24,7 @@ yarn install npm@latest -g
 2. 
 3. Install NPM packages
    ```sh
-   npm install
+   npm install moonstone-wrapper
    ```
 
 <!-- USAGE EXAMPLES -->
