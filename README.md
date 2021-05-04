@@ -22,9 +22,12 @@ you will need to have [node](https://nodejs.org/) and npm or yarn to run your co
 
 1. Get a free API Key at [https://api.dogehouse.tv/bot/auth](https://api.dogehouse.tv/bot/auth)
 2. 
-3. Install NPM packages
+3. Install moonstone and ws NPM packages
    ```sh
    npm install moonstone-wrapper
+   ```
+   ```sh
+   npm install ws
    ```
 
 <!-- USAGE EXAMPLES -->
