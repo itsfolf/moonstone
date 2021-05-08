@@ -53,6 +53,13 @@ declare namespace Moonstone {
     ): Promise<void>;
     setSpeaking(value: boolean): Promise<void>;
     createBotAccount(username: string): Promise<CreateBotReply>;
+    editSelf(options: {
+      username?: string;
+      displayName?: string;
+      avatarUrl?: string;
+      bannerUrl?: string;
+      bio?: string;
+    }): Promise<User>;
     on: EventListeners<this>;
   }
 
