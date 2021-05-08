@@ -60,6 +60,10 @@ declare namespace Moonstone {
       bannerUrl?: string;
       bio?: string;
     }): Promise<User>;
+    setUserAuthLevel(
+      user: ActiveUser,
+      level: keyof Constants.AuthLevel
+    ): Promise<void>;
     on: EventListeners<this>;
   }
 
@@ -117,6 +121,7 @@ declare namespace Moonstone {
     ): Promise<void>;
     setAsListener(): Promise<void>;
     setAsSpeaker(): Promise<void>;
+    setAuthLevel(level: keyof Constants.AuthLevel): Promise<void>;
   }
 
   export class Room {
@@ -247,6 +252,14 @@ declare namespace Moonstone {
     isUsernameTaken?: Boolean;
     error?: String;
   };
+
+  interface Constants {
+    AuthLevel: {
+      USER: "user";
+      MOD: "mod";
+      OWNER: "owner";
+    };
+  }
 }
 
 export = Moonstone;
