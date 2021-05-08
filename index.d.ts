@@ -211,7 +211,8 @@ declare namespace Moonstone {
         | "userJoinRoom"
         | "activeSpeakerChange"
         | "muteChange"
-        | "deafenChange",
+        | "deafenChange"
+        | "modChange",
       listener: (user: ActiveUser, room: ActiveRoom) => void
     ): T;
     (

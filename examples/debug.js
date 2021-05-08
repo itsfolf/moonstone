@@ -135,6 +135,14 @@ bot.on("becameSpeaker", (room) => {
 
 bot.on("newTokens", (tokens) => console.log("Got new tokens", tokens));
 
+bot.on("modChanged", (user, room) => {
+  console.log(
+    user.username +
+      (user.roomPermissions.isMod ? " became " : " is no longer ") +
+      "a mod"
+  );
+});
+
 bot.on("warn", (msg) => console.log("Warn", msg));
 bot.on("error", (msg) => console.log("Error", msg));
 bot.on("debug", (msg) => console.log("Debug", msg));
