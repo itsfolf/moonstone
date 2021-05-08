@@ -9,7 +9,7 @@ bot.on("ready", async (user) => {
 });
 
 bot.on("userJoinRoom", async (user, room) => {
-  await user.sendWhisper("Hi, welcome to " + room.name + "!"); // Send a whisper
+  await user.sendWhisper("Hello! Welcome to " + room.name + ". Here you can find ANYTHNG ABOUT YOUR ROOM GOES HERE."); // Send a whisper
 });
 
 bot.connect(); // Connect the bot to Dogehouse
