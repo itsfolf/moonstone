@@ -11,7 +11,7 @@ A simple, standalone, [dogehouse.tv](https://dogehouse.tv/) API wrapper
 You will need NodeJS and NPM. To install moonstone on your local project, run:
 
 ```
-npm install --no-optional moonstone-wrapper
+npm install --no-optional --production moonstone-wrapper
 ```
 
 **If you need audio support, remove the `--no-optional`.**
