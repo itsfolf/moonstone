@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "eslint": "eslint --fix lib index.js",
-    "docs": "documentation build lib/** -t node_modules/documentation-devseed-theme -f html -o docs -p -g",
-    "docs:serve": "documentation serve lib/** -t node_modules/documentation-devseed-theme -f html -p -g"
+    "docs": "documentation build index.js -t node_modules/documentation-devseed-theme -f html -o docs -p -g",
+    "docs:serve": "documentation serve index.js -t node_modules/documentation-devseed-theme -f html -p -g"
   },
   "repository": {
     "type": "git",
