@@ -4,7 +4,9 @@
   "description": "A dogehouse.tv API wrapper",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint --fix lib index.js"
+    "eslint": "eslint --fix lib index.js",
+    "docs": "documentation build lib/** -t node_modules/documentation-devseed-theme -f html -o docs",
+    "docs:serve": "documentation serve lib/** -t node_modules/documentation-devseed-theme -f html"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,8 @@
   },
   "homepage": "https://github.com/fuwwy/moonstone#readme",
   "devDependencies": {
+    "documentation": "^13.2.5",
+    "documentation-devseed-theme": "1chiSensei/documentation-devseed-theme",
     "eslint": "^7.25.0"
   },
   "dependencies": {

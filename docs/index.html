@@ -1,0 +1,6103 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>moonstone-wrapper 0.0.6 | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' rel='stylesheet' />
+  <link href='assets/style.css' rel='stylesheet' />
+  <link href='assets/github.css' rel='stylesheet' />
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i' />
+</head>
+<body class='documentation m0'>
+  <div class='page flex'>
+    <header class='page__header'>
+      <div class='inner'>
+        <div class='page__headline'>
+          <h1 class='mb0 no-anchor page__title'>moonstone-wrapper</h1>
+          <p class='mb1 page__subtitle'><code>0.0.6</code></p>
+        </div>
+
+        <a id='menu-toggle' href='#prime-nav' title='Show/hide menu' class='menu-toggle'><span>Browse</span></a>
+
+        <nav class='page__prime-nav' id='prime-nav'>
+          <input placeholder='Filter' id='filter-input' class='col12 block input' type='text' />
+
+          <h2 class='mb1 page__subtitle'>Contents</h2>
+
+          <div class='page__nav-contents'>
+            <div id='toc'>
+              <ul class='ppn__menu'>
+                
+                  
+                  <li><a
+                    href='#audioconnection'
+                    class=' toggle-sibling ppn__menu-item'>
+                    AudioConnection
+                    <span class='icon'>▸</span>
+                  </a>
+                  
+                  <div class='toggle-target display-none'>
+                    
+                    
+                      <ul class='list-reset py1-ul pl1 ppn__menu-item'>
+                        <li class='h5 ppn__section-title'><span>Instance members</span></li>
+                        
+                        <li><a
+                          href='#audioconnectionplay'
+                          class='regular pre-open ppn__menu-item'>
+                          #play
+                        </a></li>
+                        
+                        <li><a
+                          href='#audioconnectionsetspeaking'
+                          class='regular pre-open ppn__menu-item'>
+                          #setSpeaking
+                        </a></li>
+                        
+                      </ul>
+                    
+                    
+                    
+                  </div>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#player'
+                    class=' ppn__menu-item'>
+                    player
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#pausedsince'
+                    class=' ppn__menu-item'>
+                    pausedSince
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#pause'
+                    class=' ppn__menu-item'>
+                    pause
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#paused'
+                    class=' ppn__menu-item'>
+                    paused
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#pausedtime'
+                    class=' ppn__menu-item'>
+                    pausedTime
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#resume'
+                    class=' ppn__menu-item'>
+                    resume
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#streamtime'
+                    class=' ppn__menu-item'>
+                    streamTime
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#totalstreamtime'
+                    class=' ppn__menu-item'>
+                    totalStreamTime
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventstreamdispatcherstart'
+                    class=' ppn__menu-item'>
+                    StreamDispatcher#start
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventstreamdispatchervolumechange'
+                    class=' ppn__menu-item'>
+                    StreamDispatcher#volumeChange
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#volumeinterface'
+                    class=' toggle-sibling ppn__menu-item'>
+                    VolumeInterface
+                    <span class='icon'>▸</span>
+                  </a>
+                  
+                  <div class='toggle-target display-none'>
+                    
+                    
+                      <ul class='list-reset py1-ul pl1 ppn__menu-item'>
+                        <li class='h5 ppn__section-title'><span>Instance members</span></li>
+                        
+                        <li><a
+                          href='#volumeinterfacevolumeeditable'
+                          class='regular pre-open ppn__menu-item'>
+                          #volumeEditable
+                        </a></li>
+                        
+                        <li><a
+                          href='#volumeinterfacevolume'
+                          class='regular pre-open ppn__menu-item'>
+                          #volume
+                        </a></li>
+                        
+                        <li><a
+                          href='#volumeinterfacevolumedecibels'
+                          class='regular pre-open ppn__menu-item'>
+                          #volumeDecibels
+                        </a></li>
+                        
+                        <li><a
+                          href='#volumeinterfacevolumelogarithmic'
+                          class='regular pre-open ppn__menu-item'>
+                          #volumeLogarithmic
+                        </a></li>
+                        
+                        <li><a
+                          href='#volumeinterfacesetvolume'
+                          class='regular pre-open ppn__menu-item'>
+                          #setVolume
+                        </a></li>
+                        
+                        <li><a
+                          href='#volumeinterfacesetvolumedecibels'
+                          class='regular pre-open ppn__menu-item'>
+                          #setVolumeDecibels
+                        </a></li>
+                        
+                        <li><a
+                          href='#volumeinterfacesetvolumelogarithmic'
+                          class='regular pre-open ppn__menu-item'>
+                          #setVolumeLogarithmic
+                        </a></li>
+                        
+                      </ul>
+                    
+                    
+                    
+                  </div>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventvolumeinterfacevolumechange'
+                    class=' ppn__menu-item'>
+                    VolumeInterface#volumeChange
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#activeroom'
+                    class=' toggle-sibling ppn__menu-item'>
+                    ActiveRoom
+                    <span class='icon'>▸</span>
+                  </a>
+                  
+                  <div class='toggle-target display-none'>
+                    
+                    
+                      <ul class='list-reset py1-ul pl1 ppn__menu-item'>
+                        <li class='h5 ppn__section-title'><span>Instance members</span></li>
+                        
+                        <li><a
+                          href='#activeroomasktospeak'
+                          class='regular pre-open ppn__menu-item'>
+                          #askToSpeak
+                        </a></li>
+                        
+                        <li><a
+                          href='#activeroomsendchatmessage'
+                          class='regular pre-open ppn__menu-item'>
+                          #sendChatMessage
+                        </a></li>
+                        
+                        <li><a
+                          href='#activeroomconnect'
+                          class='regular pre-open ppn__menu-item'>
+                          #connect
+                        </a></li>
+                        
+                      </ul>
+                    
+                    
+                    
+                  </div>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#activeuser'
+                    class=' toggle-sibling ppn__menu-item'>
+                    ActiveUser
+                    <span class='icon'>▸</span>
+                  </a>
+                  
+                  <div class='toggle-target display-none'>
+                    
+                    
+                      <ul class='list-reset py1-ul pl1 ppn__menu-item'>
+                        <li class='h5 ppn__section-title'><span>Instance members</span></li>
+                        
+                        <li><a
+                          href='#activeusersendwhisper'
+                          class='regular pre-open ppn__menu-item'>
+                          #sendWhisper
+                        </a></li>
+                        
+                        <li><a
+                          href='#activeusersetaslistener'
+                          class='regular pre-open ppn__menu-item'>
+                          #setAsListener
+                        </a></li>
+                        
+                        <li><a
+                          href='#activeusersetasspeaker'
+                          class='regular pre-open ppn__menu-item'>
+                          #setAsSpeaker
+                        </a></li>
+                        
+                        <li><a
+                          href='#activeusersetauthlevel'
+                          class='regular pre-open ppn__menu-item'>
+                          #setAuthLevel
+                        </a></li>
+                        
+                      </ul>
+                    
+                    
+                    
+                  </div>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#message'
+                    class=' ppn__menu-item'>
+                    Message
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#room'
+                    class=' ppn__menu-item'>
+                    Room
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#user'
+                    class=' ppn__menu-item'>
+                    User
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#moonstone'
+                    class=' toggle-sibling ppn__menu-item'>
+                    Moonstone
+                    <span class='icon'>▸</span>
+                  </a>
+                  
+                  <div class='toggle-target display-none'>
+                    
+                    
+                      <ul class='list-reset py1-ul pl1 ppn__menu-item'>
+                        <li class='h5 ppn__section-title'><span>Instance members</span></li>
+                        
+                        <li><a
+                          href='#moonstoneconnect'
+                          class='regular pre-open ppn__menu-item'>
+                          #connect
+                        </a></li>
+                        
+                        <li><a
+                          href='#moonstonegettoprooms'
+                          class='regular pre-open ppn__menu-item'>
+                          #getTopRooms
+                        </a></li>
+                        
+                        <li><a
+                          href='#moonstonejoinroom'
+                          class='regular pre-open ppn__menu-item'>
+                          #joinRoom
+                        </a></li>
+                        
+                        <li><a
+                          href='#moonstonecreateroom'
+                          class='regular pre-open ppn__menu-item'>
+                          #createRoom
+                        </a></li>
+                        
+                        <li><a
+                          href='#moonstonecreatebotaccount'
+                          class='regular pre-open ppn__menu-item'>
+                          #createBotAccount
+                        </a></li>
+                        
+                        <li><a
+                          href='#moonstonesetrole'
+                          class='regular pre-open ppn__menu-item'>
+                          #setRole
+                        </a></li>
+                        
+                        <li><a
+                          href='#moonstonesendchatmessage'
+                          class='regular pre-open ppn__menu-item'>
+                          #sendChatMessage
+                        </a></li>
+                        
+                        <li><a
+                          href='#moonstonesetspeaking'
+                          class='regular pre-open ppn__menu-item'>
+                          #setSpeaking
+                        </a></li>
+                        
+                        <li><a
+                          href='#moonstonesetuserauthlevel'
+                          class='regular pre-open ppn__menu-item'>
+                          #setUserAuthLevel
+                        </a></li>
+                        
+                        <li><a
+                          href='#moonstoneeditself'
+                          class='regular pre-open ppn__menu-item'>
+                          #editSelf
+                        </a></li>
+                        
+                      </ul>
+                    
+                    
+                    
+                  </div>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstoneready'
+                    class=' ppn__menu-item'>
+                    Moonstone#ready
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstonenewtokens'
+                    class=' ppn__menu-item'>
+                    Moonstone#newTokens
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstonejoinedroom'
+                    class=' ppn__menu-item'>
+                    Moonstone#joinedRoom
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstoneuserjoinroom'
+                    class=' ppn__menu-item'>
+                    Moonstone#userJoinRoom
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstoneuserjoinroom'
+                    class=' ppn__menu-item'>
+                    Moonstone#userJoinRoom
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstoneactivespeakerchange'
+                    class=' ppn__menu-item'>
+                    Moonstone#activeSpeakerChange
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstonemutechange'
+                    class=' ppn__menu-item'>
+                    Moonstone#muteChange
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstonedeafenchange'
+                    class=' ppn__menu-item'>
+                    Moonstone#deafenChange
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstonenewchatmsg'
+                    class=' ppn__menu-item'>
+                    Moonstone#newChatMsg
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstonejoinaspeer'
+                    class=' ppn__menu-item'>
+                    Moonstone#joinAsPeer
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstonejoinaspeer'
+                    class=' ppn__menu-item'>
+                    Moonstone#joinAsPeer
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstonebecamespeaker'
+                    class=' ppn__menu-item'>
+                    Moonstone#becameSpeaker
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstonehandraised'
+                    class=' ppn__menu-item'>
+                    Moonstone#handRaised
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstonespeakeradded'
+                    class=' ppn__menu-item'>
+                    Moonstone#speakerAdded
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstonespeakerremoved'
+                    class=' ppn__menu-item'>
+                    Moonstone#speakerRemoved
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstoneleftroom'
+                    class=' ppn__menu-item'>
+                    Moonstone#leftRoom
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#eventmoonstonemodchange'
+                    class=' ppn__menu-item'>
+                    Moonstone#modChange
+                    
+                  </a>
+                  
+                  </li>
+                
+                  
+                  <li><a
+                    href='#collection'
+                    class=' toggle-sibling ppn__menu-item'>
+                    Collection
+                    <span class='icon'>▸</span>
+                  </a>
+                  
+                  <div class='toggle-target display-none'>
+                    
+                    
+                      <ul class='list-reset py1-ul pl1 ppn__menu-item'>
+                        <li class='h5 ppn__section-title'><span>Instance members</span></li>
+                        
+                        <li><a
+                          href='#collectionupdate'
+                          class='regular pre-open ppn__menu-item'>
+                          #update
+                        </a></li>
+                        
+                        <li><a
+                          href='#collectionadd'
+                          class='regular pre-open ppn__menu-item'>
+                          #add
+                        </a></li>
+                        
+                        <li><a
+                          href='#collectionevery'
+                          class='regular pre-open ppn__menu-item'>
+                          #every
+                        </a></li>
+                        
+                        <li><a
+                          href='#collectionfilter'
+                          class='regular pre-open ppn__menu-item'>
+                          #filter
+                        </a></li>
+                        
+                        <li><a
+                          href='#collectionfind'
+                          class='regular pre-open ppn__menu-item'>
+                          #find
+                        </a></li>
+                        
+                        <li><a
+                          href='#collectionmap'
+                          class='regular pre-open ppn__menu-item'>
+                          #map
+                        </a></li>
+                        
+                        <li><a
+                          href='#collectionrandom'
+                          class='regular pre-open ppn__menu-item'>
+                          #random
+                        </a></li>
+                        
+                        <li><a
+                          href='#collectionreduce'
+                          class='regular pre-open ppn__menu-item'>
+                          #reduce
+                        </a></li>
+                        
+                        <li><a
+                          href='#collectionremove'
+                          class='regular pre-open ppn__menu-item'>
+                          #remove
+                        </a></li>
+                        
+                        <li><a
+                          href='#collectionsome'
+                          class='regular pre-open ppn__menu-item'>
+                          #some
+                        </a></li>
+                        
+                      </ul>
+                    
+                    
+                    
+                  </div>
+                  
+                  </li>
+                
+              </ul>
+
+              <div class='mt1 h6 quiet'>
+                <a class='page__subtitle' href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class='page__body'>
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='audioconnection'>
+      AudioConnection
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Represents an audio connection</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>new AudioConnection(client: any, options: any)</div>
+  
+  
+    <p>
+      Extends
+      
+        EventEmitter
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>client</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(any
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>player</span> <code class='quiet'>(AudioPlayer?)</code>
+          : The current audio player
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='audioconnectionplay'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>play(resource, options = {})</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Play an audio resource.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>play(resource: (ReadableStream | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>), options: StreamOptions?): AudioDispatcher</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>resource</span> <code class='quiet'>((ReadableStream | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>))</code>
+	    The resource to play
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(StreamOptions?
+            = <code>{}</code>)</code>
+	    The options to play.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>AudioDispatcher</code>:
+        
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// Play a local audio file</span>
+connection.play(<span class="hljs-string">'/home/hydrabolt/audio.mp3'</span>, { <span class="hljs-attr">volume</span>: <span class="hljs-number">0.5</span> });</pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// Play a ReadableStream</span>
+connection.play(ytdl(<span class="hljs-string">'https://www.youtube.com/watch?v=ZlAU_w7-Xp8'</span>, { <span class="hljs-attr">quality</span>: <span class="hljs-string">'highestaudio'</span> }));</pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// Play a voice broadcast</span>
+<span class="hljs-keyword">const</span> broadcast = client.voice.createBroadcast();
+broadcast.play(<span class="hljs-string">'/home/hydrabolt/audio.mp3'</span>);
+connection.play(broadcast);</pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// Using different protocols: https://ffmpeg.org/ffmpeg-protocols.html</span>
+connection.play(<span class="hljs-string">'http://www.sample-videos.com/audio/mp3/wave.mp3'</span>);</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='audioconnectionsetspeaking'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>setSpeaking(speaking)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Set the client speaking state</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>setSpeaking(speaking: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>speaking</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='player'>
+      player
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>The Audio Player that controls this dispatcher</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>player</div>
+  
+    <p>
+      Type:
+      AudioPlayer
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='pausedsince'>
+      pausedSince
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>The time that the stream was paused at (null if not paused)</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>pausedSince</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='pause'>
+      pause
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Pauses playback</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>pause(silence: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>silence</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>
+            = <code>false</code>)</code>
+	    Whether to play silence while paused to prevent audio glitches
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='paused'>
+      paused
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Whether or not playback is paused</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>paused</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='pausedtime'>
+      pausedTime
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Total time that this dispatcher has been paused in milliseconds</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>pausedTime</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='resume'>
+      resume
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Resumes playback</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>resume()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='streamtime'>
+      streamTime
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>The time (in milliseconds) that the dispatcher has actually been playing audio for</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>streamTime</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='totalstreamtime'>
+      totalStreamTime
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>The time (in milliseconds) that the dispatcher has been playing audio for, taking into account skips and pauses</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>totalStreamTime</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventstreamdispatcherstart'>
+      StreamDispatcher#start
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Emitted once the stream has started to play.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>StreamDispatcher#start</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventstreamdispatchervolumechange'>
+      StreamDispatcher#volumeChange
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Emitted when the volume of this dispatcher changes.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>StreamDispatcher#volumeChange</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>oldVolume</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The old volume of this dispatcher
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>newVolume</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The new volume of this dispatcher
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='volumeinterface'>
+      VolumeInterface
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>An interface class for volume transformation.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>new VolumeInterface($0: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+  
+  
+    <p>
+      Extends
+      
+        EventEmitter
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>$0</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>$0.volume</span> <code class='quiet'>any</code>
+                  
+                    (default <code>1</code>)
+                  </td>
+                  <td class='break-word'><span></span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='volumeinterfacevolumeeditable'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>volumeEditable</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Whether or not the volume of this stream is editable</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>volumeEditable</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='volumeinterfacevolume'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>volume</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>The current volume of the stream</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>volume</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='volumeinterfacevolumedecibels'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>volumeDecibels</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>The current volume of the stream in decibels</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>volumeDecibels</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='volumeinterfacevolumelogarithmic'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>volumeLogarithmic</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>The current volume of the stream from a logarithmic scale</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>volumeLogarithmic</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='volumeinterfacesetvolume'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>setVolume(volume)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Sets the volume relative to the input stream - i.e. 1 is normal, 0.5 is half, 2 is double.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>setVolume(volume: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>volume</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The volume that you want to set
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='volumeinterfacesetvolumedecibels'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>setVolumeDecibels(db)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Sets the volume in decibels.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>setVolumeDecibels(db: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>db</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The decibels
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='volumeinterfacesetvolumelogarithmic'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>setVolumeLogarithmic(value)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Sets the volume so that a perceived value of 0.5 is half the perceived volume etc.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>setVolumeLogarithmic(value: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The value for the volume
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventvolumeinterfacevolumechange'>
+      VolumeInterface#volumeChange
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Emitted when the volume of this interface changes.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>VolumeInterface#volumeChange</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>oldVolume</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The old volume of this interface
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>newVolume</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The new volume of this interface
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='activeroom'>
+      ActiveRoom
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Represents a room that you are connected to</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>new ActiveRoom(data: any, client: any)</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#room">Room</a>
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>data</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>client</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>users</span> <code class='quiet'>(<a href="#collection">Collection</a>&#x3C;<a href="#activeuser">ActiveUser</a>>)</code>
+          : The users connected to the room
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>autoSpeaker</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
+          : Whether you automatically become a speaker when you ask to speak
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>selfUser</span> <code class='quiet'>(<a href="#activeuser">ActiveUser</a>)</code>
+          : The bot user
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='activeroomasktospeak'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>askToSpeak()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Sets your role as raised hand</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>askToSpeak(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='activeroomsendchatmessage'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>sendChatMessage(content)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Sends a chat message</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>sendChatMessage(content: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>content</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>))</code>
+	    The message content
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='activeroomconnect'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>connect()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Connects to the room's audio server</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>connect(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#audioconnection">AudioConnection</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#audioconnection">AudioConnection</a>></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='activeuser'>
+      ActiveUser
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Represents a user who is connected to the same room as you</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>new ActiveUser(data: any, room: any, client: any)</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#user">User</a>
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>data</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>room</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>client</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>voiceState</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+          : The user's voice state
+
+          
+            <ul>
+              
+                <li><code>voiceState.muted</code> <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?
+                  
+                  <p>Whether the user's microphone is muted</p>
+</li>
+              
+                <li><code>voiceState.deafened</code> <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?
+                  
+                  <p>Whether the user's headphones are deafened</p>
+</li>
+              
+                <li><code>voiceState.speaking</code> <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?
+                  
+                  <p>Whether the user's currently speaking</p>
+</li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>isSpeaker</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
+          : Whether the user is a speaker in the room
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>roomPermissions</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+          : The permissions of the user in the room
+
+          
+            <ul>
+              
+                <li><code>roomPermissions.isSpeaker</code> <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?
+                  
+                  <p>Whether the user has been given permission to speak</p>
+</li>
+              
+                <li><code>roomPermissions.askedToSpeak</code> <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?
+                  
+                  <p>Whether the user has asked to speak</p>
+</li>
+              
+                <li><code>roomPermissions.isMod</code> <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?
+                  
+                  <p>Whether the user is a moderator in the current room</p>
+</li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>isCreator</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
+          : Whether the user created the current room
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='activeusersendwhisper'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>sendWhisper(content)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Sends a whisper to the user</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>sendWhisper(content: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>content</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>))</code>
+	    The message content
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='activeusersetaslistener'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>setAsListener()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Sets the user's role as listener</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>setAsListener(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='activeusersetasspeaker'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>setAsSpeaker()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Sets the user's role as speaker</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>setAsSpeaker(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='activeusersetauthlevel'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>setAuthLevel(authLevel)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Sets the user's auth status</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>setAuthLevel(authLevel: AuthLevel)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>authLevel</span> <code class='quiet'>(AuthLevel)</code>
+	    The new auth level
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='message'>
+      Message
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Represents a chat message</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>new Message(data: any, client: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>data</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>client</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>userId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : The message author's account id
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>user</span> <code class='quiet'>(<a href="#activeuser">ActiveUser</a>)</code>
+          : The message author
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>room</span> <code class='quiet'>(<a href="#activeroom">ActiveRoom</a>)</code>
+          : The room on which the message was sent
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>tokens</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>>)</code>
+          : The raw message tokens
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>sentAt</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : The time at which the message was sent
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>isWhisper</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
+          : Whether the message is a whisper
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>isPrivate</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
+          : Whether the room is private
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='room'>
+      Room
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Represents a room</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>new Room(data: any, client: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>data</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>client</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>name</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : The room's name
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>description</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : The room's description
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>isPrivate</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
+          : Whether the room is private
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>insertedAt</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : The date at which the room was inserted into the list
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='user'>
+      User
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Represents a user</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>new User(data: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>data</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>id</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : The user's account id
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>username</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : The user's username
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>avatarUrl</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : The user's avatar url
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>bannerUrl</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?)</code>
+          : The user's banner url
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>bio</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : The user's bio
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>online</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
+          : Whether the user is currently online
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>lastOnline</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : The date at which the user was last online
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>currentRoomId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?)</code>
+          : The id of the room the user is currently in
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>displayName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : The user's full name
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>numFollowing</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+          : The number of people the user is following
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>numFollowers</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+          : The number of people that follow the user
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>youAreFollowing</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
+          : Whether you are following the user
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>followsYou</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
+          : Whether the user follows you
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>botOwnerId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?)</code>
+          : The account id of the bot owner, in case this user is a bot.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='moonstone'>
+      Moonstone
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Represents the main Moonstone client</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>new Moonstone(token: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>), options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?)</div>
+  
+  
+    <p>
+      Extends
+      
+        EventEmitter
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>token</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>))</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?
+            = <code>{}</code>)</code>
+	    Moonstone options
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+          : Moonhouse options
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>rooms</span> <code class='quiet'>(<a href="#collection">Collection</a>&#x3C;<a href="#room">Room</a>>)</code>
+          : All known rooms
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>token</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+          : The auth token data
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>user</span> <code class='quiet'>(<a href="#user">User</a>)</code>
+          : The bot user
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='moonstoneconnect'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>connect()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Attempts to connect to Dogehouse</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>connect()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='moonstonegettoprooms'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getTopRooms(cursor = 0)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Get the top dashboard rooms</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>getTopRooms(cursor: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#room">Room</a>>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>cursor</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>?
+            = <code>0</code>)</code>
+	    The pagination cursor
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#room">Room</a>>></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='moonstonejoinroom'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>joinRoom(room)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Joins a room</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>joinRoom(room: <a href="#room">Room</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#activeroom">ActiveRoom</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>room</span> <code class='quiet'>(<a href="#room">Room</a>)</code>
+	    The room to join
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#activeroom">ActiveRoom</a>></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='moonstonecreateroom'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>createRoom(options)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Creates a room</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>createRoom(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#room">Room</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    The room options
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>options.name</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>
+                  </td>
+                  <td class='break-word'><span>The room name
+</span></td>
+                </tr>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>options.description</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</code>
+                  
+                    (default <code>&quot;&quot;</code>)
+                  </td>
+                  <td class='break-word'><span>The room description
+</span></td>
+                </tr>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>options.privacy</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</code>
+                  
+                    (default <code>&quot;public&quot;</code>)
+                  </td>
+                  <td class='break-word'><span>The room privacy
+</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#room">Room</a>></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='moonstonecreatebotaccount'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>createBotAccount(username)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Creates a bot account</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>createBotAccount(username: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>username</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    The new bot account username
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='moonstonesetrole'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>setRole(role, user?)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Sets a user's role in the current room.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>setRole(role: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, user: <a href="#user">User</a>?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>role</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The role to set the user as (raised_hand/listener/speaker)
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>user</span> <code class='quiet'>(<a href="#user">User</a>?)</code>
+	    The user to set the role on, defaults to self.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='moonstonesendchatmessage'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>sendChatMessage(content, whisperedTo = [])</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Sends a chat message in the current room.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>sendChatMessage(content: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>), whisperedTo: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#user">User</a>>?)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>content</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>))</code>
+	    Message contnet
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>whisperedTo</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#user">User</a>>?
+            = <code>[]</code>)</code>
+	    A list of users to whisper the message to
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='moonstonesetspeaking'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>setSpeaking(value)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Sets wheter the bot is speaking or not (red circle around picture)</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>setSpeaking(value: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
+	    Whether the bot is speaking or not.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='moonstonesetuserauthlevel'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>setUserAuthLevel(user, authLevel)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Sets a user's auth level</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>setUserAuthLevel(user: <a href="#activeuser">ActiveUser</a>, authLevel: AuthLevel)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>user</span> <code class='quiet'>(<a href="#activeuser">ActiveUser</a>)</code>
+	    The user to apply the change on
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>authLevel</span> <code class='quiet'>(AuthLevel)</code>
+	    The user's auth level
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='moonstoneeditself'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>editSelf(options)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Edits properties of the user</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>editSelf(options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+            = <code>{}</code>)</code>
+	    The propreties to edit
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>options.username</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</code>
+                  </td>
+                  <td class='break-word'><span>The new username
+</span></td>
+                </tr>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>options.displayName</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</code>
+                  </td>
+                  <td class='break-word'><span>The new display name
+</span></td>
+                </tr>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>options.avatarUrl</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</code>
+                  </td>
+                  <td class='break-word'><span>The new avatar url
+</span></td>
+                </tr>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>options.bannerUrl</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</code>
+                  </td>
+                  <td class='break-word'><span>The new banner url
+</span></td>
+                </tr>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>options.bio</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</code>
+                  </td>
+                  <td class='break-word'><span>The new bio
+</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstoneready'>
+      Moonstone#ready
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when the connection is established</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#ready</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>user</span> <code class='quiet'>(<a href="#user">User</a>)</code>
+          : The bot user
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstonenewtokens'>
+      Moonstone#newTokens
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when new auth tokens are sent by the server.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#newTokens</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>tokens</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+          : New auth data
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstonejoinedroom'>
+      Moonstone#joinedRoom
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when the bot joins a room.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#joinedRoom</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>room</span> <code class='quiet'>(<a href="#activeroom">ActiveRoom</a>)</code>
+          : The joined room
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstoneuserjoinroom'>
+      Moonstone#userJoinRoom
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when a user joins the room the bot is in.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#userJoinRoom</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>user</span> <code class='quiet'>(<a href="#activeuser">ActiveUser</a>)</code>
+          : The user who joined
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>room</span> <code class='quiet'>(<a href="#activeroom">ActiveRoom</a>)</code>
+          : The room
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstoneuserjoinroom'>
+      Moonstone#userJoinRoom
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when a user leaves the room the bot is in.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#userJoinRoom</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>user</span> <code class='quiet'>(<a href="#activeuser">ActiveUser</a>)</code>
+          : The user who left
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>room</span> <code class='quiet'>(<a href="#activeroom">ActiveRoom</a>)</code>
+          : The room
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstoneactivespeakerchange'>
+      Moonstone#activeSpeakerChange
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when a user starts or stops speaking</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#activeSpeakerChange</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>user</span> <code class='quiet'>(<a href="#activeuser">ActiveUser</a>)</code>
+          : The user whose state changed.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>room</span> <code class='quiet'>(<a href="#activeroom">ActiveRoom</a>)</code>
+          : The room
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstonemutechange'>
+      Moonstone#muteChange
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when a user mutes or unmutes their microphone.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#muteChange</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>user</span> <code class='quiet'>(<a href="#activeuser">ActiveUser</a>)</code>
+          : The user whose state changed.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>room</span> <code class='quiet'>(<a href="#activeroom">ActiveRoom</a>)</code>
+          : The room
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstonedeafenchange'>
+      Moonstone#deafenChange
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when a user deafens or undeafens their headphones.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#deafenChange</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>user</span> <code class='quiet'>(<a href="#activeuser">ActiveUser</a>)</code>
+          : The user whose state changed.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>room</span> <code class='quiet'>(<a href="#activeroom">ActiveRoom</a>)</code>
+          : The room
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstonenewchatmsg'>
+      Moonstone#newChatMsg
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when a new chat message is received.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#newChatMsg</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>message</span> <code class='quiet'>(<a href="#message">Message</a>)</code>
+          : The received message.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstonejoinaspeer'>
+      Moonstone#joinAsPeer
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when the bot join a room as peer (listener).</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#joinAsPeer</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>room</span> <code class='quiet'>(<a href="#activeroom">ActiveRoom</a>)</code>
+          : The joined room.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>voiceDataCache</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+          : Information regarging voice connections.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstonejoinaspeer'>
+      Moonstone#joinAsPeer
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when the bot join a room as speaker.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#joinAsPeer</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>room</span> <code class='quiet'>(<a href="#room">Room</a>)</code>
+          : The joined room.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>voiceDataCache</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+          : Information regarging voice connections.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstonebecamespeaker'>
+      Moonstone#becameSpeaker
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when the bot becomes a speaker in a room.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#becameSpeaker</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>room</span> <code class='quiet'>(<a href="#activeroom">ActiveRoom</a>)</code>
+          : The room where the bot became a speaker.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>voiceDataCache</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+          : Information regarging voice connections.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstonehandraised'>
+      Moonstone#handRaised
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when a user raises their hand.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#handRaised</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>user</span> <code class='quiet'>(<a href="#activeuser">ActiveUser</a>)</code>
+          : The user who raised their hand.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>room</span> <code class='quiet'>(<a href="#activeroom">ActiveRoom</a>)</code>
+          : The room in context.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstonespeakeradded'>
+      Moonstone#speakerAdded
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when a user is added as a speaker.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#speakerAdded</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>user</span> <code class='quiet'>(<a href="#activeuser">ActiveUser</a>)</code>
+          : The user who was added as a speaker.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>room</span> <code class='quiet'>(<a href="#activeroom">ActiveRoom</a>)</code>
+          : The room in context.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstonespeakerremoved'>
+      Moonstone#speakerRemoved
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when a user is removed as a speaker.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#speakerRemoved</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>user</span> <code class='quiet'>(<a href="#activeuser">ActiveUser</a>)</code>
+          : The user who was removed as a speaker.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>room</span> <code class='quiet'>(<a href="#activeroom">ActiveRoom</a>)</code>
+          : The room in context.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstoneleftroom'>
+      Moonstone#leftRoom
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when the bot leaves a room.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#leftRoom</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>room</span> <code class='quiet'>(<a href="#activeroom">ActiveRoom</a>)</code>
+          : The room the bot left from.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>kicked</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
+          : Whether the bot was kicked from the room.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventmoonstonemodchange'>
+      Moonstone#modChange
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Fired when a user's moderator permission changes.</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>Moonstone#modChange</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>user</span> <code class='quiet'>(<a href="#activeuser">ActiveUser</a>)</code>
+          : The updated user.
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>room</span> <code class='quiet'>(<a href="#activeroom">ActiveRoom</a>)</code>
+          : The room in context.
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      
+        
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='collection'>
+      Collection
+    </h3>
+    
+    
+  </div>
+  
+
+  <div class="markdown-body">
+    <p>Hold a bunch of something</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>new Collection(baseObject: Class, limit: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>?)</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a>
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>baseObject</span> <code class='quiet'>(Class)</code>
+	    The base class for all items
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>limit</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>?)</code>
+	    Max number of items to hold
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>baseObject</span> <code class='quiet'>(Class)</code>
+          : The base class for all items
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>limit</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>?)</code>
+          : Max number of items to hold
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='collectionupdate'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>update(obj, extra?, replace?)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Update an object</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>update(obj: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, extra: Class?, replace: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?): Class</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>obj</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    The updated object data
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>obj.id</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>
+                  </td>
+                  <td class='break-word'><span>The ID of the object
+</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>extra</span> <code class='quiet'>(Class?)</code>
+	    An extra parameter the constructor may need
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>replace</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?)</code>
+	    Whether to replace an existing object with the same ID
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Class</code>:
+        The updated object
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='collectionadd'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>add(obj, extra?, replace?)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Add an object</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>add(obj: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, extra: Class?, replace: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?): Class</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>obj</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    The object data
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>obj.id</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>
+                  </td>
+                  <td class='break-word'><span>The ID of the object
+</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>extra</span> <code class='quiet'>(Class?)</code>
+	    An extra parameter the constructor may need
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>replace</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>?)</code>
+	    Whether to replace an existing object with the same ID
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Class</code>:
+        The existing or newly created object
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='collectionevery'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>every(func)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Returns true if all elements satisfy the condition</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>every(func: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that takes an object and returns true or false
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code>:
+        Whether or not all elements satisfied the condition
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='collectionfilter'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>filter(func)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Return all the objects that make the function evaluate true</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>filter(func: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Class></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that takes an object and returns true if it matches
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Class></code>:
+        An array containing all the objects that matched
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='collectionfind'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>find(func)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Return the first object to make the function evaluate true</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>find(func: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>): Class?</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that takes an object and returns true if it matches
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Class?</code>:
+        The first matching object, or undefined if no match
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='collectionmap'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>map(func)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Return an array with the results of applying the given function to each element</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>map(func: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that takes an object and returns something
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        An array containing the results
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='collectionrandom'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>random()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Get a random object from the Collection</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>random(): Class?</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Class?</code>:
+        The random object, or undefined if there is no match
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='collectionreduce'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>reduce(func, initialValue?)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Returns a value resulting from applying a function to every element of the collection</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>reduce(func: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>, initialValue: any?): any</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that takes the previous value and the next item and returns a new value
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>initialValue</span> <code class='quiet'>(any?)</code>
+	    The initial value passed to the function
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        The final result
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='collectionremove'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>remove(obj)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Remove an object</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>remove(obj: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): Class?</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>obj</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    The object
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>obj.id</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>
+                  </td>
+                  <td class='break-word'><span>The ID of the object
+</span></td>
+                </tr>
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Class?</code>:
+        The removed object, or null if nothing was removed
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='collectionsome'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>some(func)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <div class="markdown-body">
+    <p>Returns true if at least one element satisfies the condition</p>
+
+  </div>
+
+  <div class='pre p1 fill-light mt0'>some(func: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
+	    A function that takes an object and returns true or false
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code>:
+        Whether or not at least one element satisfied the condition
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+      
+    </main>
+  </div>
+
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
+  <script src='assets/nav.js'></script>
+</body>
+</html>
