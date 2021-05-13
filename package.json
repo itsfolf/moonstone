@@ -4,7 +4,8 @@
   "description": "A dogehouse.tv API wrapper",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint --fix lib index.js"
+    "eslint": "eslint --fix lib index.js",
+    "docs": "docgen --source lib --custom docs/index.yml --output docs/docs.json"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   },
   "homepage": "https://github.com/fuwwy/moonstone#readme",
   "devDependencies": {
+    "discord.js-docgen": "git+https://github.com/discordjs/docgen.git",
     "eslint": "^7.25.0"
   },
   "dependencies": {
