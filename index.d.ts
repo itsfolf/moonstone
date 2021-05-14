@@ -176,7 +176,7 @@ declare namespace Moonstone {
 
   export class AudioConnection extends EventEmitter {
     player?: AudioPlayer;
-    disonnect(): void;
+    disconnect(): void;
     connect(): Promise<void>;
     play(
       resource: ReadableStream | string,
