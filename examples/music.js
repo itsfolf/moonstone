@@ -45,6 +45,7 @@ const isPlayingMusic = (room) => {
   );
 };
 
+// List of commands
 const commandList = bot.buildChatMessage((b) =>
   b
     .text("Here's a list of commands:")
@@ -65,9 +66,13 @@ bot.on("newChatMsg", async (msg) => {
       : [];
 
     switch (command.substring(1)) {
+
+      // Responds with List of commands
       case "help":
         await msg.user.sendWhisper(commandList);
         break;
+      
+      // Plays music from youtube url
       case "play":
         if (args.length < 1)
           return await msg.room.sendChatMessage("Invalid url");
@@ -77,6 +82,8 @@ bot.on("newChatMsg", async (msg) => {
         );
         playFromUrl(msg.room, url);
         break;
+      
+      // Pauses current playing music
       case "pause":
         if (!isPlayingMusic(msg.room))
           return msg.room.sendChatMessage("Not playing anything.");
@@ -86,6 +93,8 @@ bot.on("newChatMsg", async (msg) => {
         else msg.room.audioConnection.player.dispatcher.resume();
 
         break;
+      
+      // Changes the volume of music
       case "volume":
         if (!isPlayingMusic(msg.room))
           return msg.room.sendChatMessage("Not playing anything.");
@@ -98,6 +107,8 @@ bot.on("newChatMsg", async (msg) => {
 
         msg.room.audioConnection.player.dispatcher.setVolume(volume); // Set music volume
         break;
+
+      // Responds with: Unknown command
       default:
         await msg.room.sendChatMessage("Unknown command.");
         break;
@@ -106,6 +117,7 @@ bot.on("newChatMsg", async (msg) => {
 });
 
 const playFromUrl = async (room, url) => {
+  // Asks for speakers permisions
   if (!room.selfUser.isSpeaker) {
     await room.sendChatMessage(
       "I need to be a speaker in order to play music."
