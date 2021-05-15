@@ -6,6 +6,7 @@ on:
       - '!docs'
     tags:
       - '*'
+  workflow_dispatch:
 jobs:
   docs:
     name: Documentation
