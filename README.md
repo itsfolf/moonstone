@@ -55,7 +55,7 @@ More examples can be found in [the examples folder](https://github.com/fuwwy/moo
 
 ## Support
 
-You can find me on the [DogeGarden Discord](https://discord.gg/pPaXCRrVrh) (Checkium#4508) or my own [official support server](https://discord.gg/hDj42dMhn9).
+You can find help on the [official support server](https://discord.gg/hDj42dMhn9).
 
 <!-- LICENSE -->
 
