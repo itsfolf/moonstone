@@ -1,5 +1,6 @@
-const Moonstone = require("../");
+const Moonstone = require("moonstone-wrapper");
 
+// [How to get your tokens](http://moonstone.folf.party/#/main/main/general/tokens).
 var bot = Moonstone({
   accessToken: "...",
   refreshToken: "...",

@@ -1,4 +1,16 @@
 - name: General
   files:
     - name: Welcome
-      path: ../../README.md
+      path: welcome.md
+    - name: How to create a bot account
+      path: botAccount.md
+    - name: How to get your personal tokens
+      path: tokens.md
+- name: Examples
+  files:
+    - name: Create bot account
+      path: createBotAccount.js
+    - name: Room greeting
+      path: welcomer.js
+    - name: Music
+      path: music.js

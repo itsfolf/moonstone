@@ -1,4 +1,5 @@
-const Moonstone = require("../");
+// This is a file I use for debugging, do not include in the docs.
+const Moonstone = require("../..");
 
 // {refreshToken: ..., accessToken: ...}
 const bot = Moonstone(require("./auth"), { logUnhandledPackets: true });

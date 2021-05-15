@@ -1,6 +1,6 @@
-const Moonstone = require("../");
+const Moonstone = require("moonstone-wrapper");
 const ytdl = require("ytdl-core-discord");
-const bot = Moonstone(require("./auth"));
+const bot = Moonstone("BOT_TOKEN");
 
 bot.on("ready", async (user) => {
   console.log("Ready! Logged in as " + user.username);
