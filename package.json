@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/fuwwy/moonstone#readme",
   "devDependencies": {
-    "discord.js-docgen": "git+https://github.com/discordjs/docgen.git",
+    "discord.js-docgen": "git+https://github.com/fuwwy/docgen.git#patch-1",
     "eslint": "^7.25.0"
   },
   "dependencies": {

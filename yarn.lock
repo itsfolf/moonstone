@@ -517,9 +517,9 @@ detect-libc@^1.0.2, detect-libc@^1.0.3:
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
   integrity sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
 
-"discord.js-docgen@git+https://github.com/discordjs/docgen.git":
+"discord.js-docgen@git+https://github.com/fuwwy/docgen.git#patch-1":
   version "0.9.0"
-  resolved "git+https://github.com/discordjs/docgen.git#1ca6ae4b269ad1860880dd102009999b3ebb957e"
+  resolved "git+https://github.com/fuwwy/docgen.git#4e3350a1e6deeeeec2224f1642d19c0330a04214"
   dependencies:
     eslint "^6.3.0"
     js-yaml "^3.13.1"
