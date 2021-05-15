@@ -6,5 +6,5 @@ parserOptions:
   ecmaVersion: 8
 rules:
   semi: [2, "always"]
-  object-curly-newline:
-    - never
+  object-curly-newline: 0
+  no-var: 2
