@@ -1,5 +1,3 @@
-<!-- Made By Isaiah-Hamilton(https://github.com/Isaiah-Hamilton) -->
-
 # Moonstone [![NPM version](https://img.shields.io/npm/v/moonstone-wrapper.svg?style=flat-square&color=informational)](https://npmjs.com/package/moonstone-wrapper)
 
 A simple, standalone, [dogehouse.tv](https://dogehouse.tv/) API wrapper
@@ -71,3 +69,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 - [fuwwy](https://github.com/fuwwy)
 - [Isaiah-Hamilton](https://github.com/Isaiah-Hamilton)
+- [1chiSensei](https://github.com/1chiSensei)
