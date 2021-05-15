@@ -18,6 +18,7 @@ declare namespace Moonstone {
     connectionTimeout?: number;
     callbackTimeout?: number;
     logUnhandledPackets?: boolean;
+    pingInterval?: number;
   }
 
   declare type chatTokenArray = Array<{ type: string; value: string }>;
@@ -35,6 +36,7 @@ declare namespace Moonstone {
     options: ClientOptions;
     rooms: Collection<Room>;
     user: User;
+    latency: Number;
     connect(): void;
     getTopRooms(): Promise<Array<Room>>;
     joinRoom(room: Room): Promise<ActiveRoom>;
