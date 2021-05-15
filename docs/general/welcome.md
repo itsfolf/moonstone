@@ -1,4 +1,4 @@
-# Moonstone [![NPM version](https://img.shields.io/npm/v/moonstone-wrapper.svg?style=flat-square&color=informational)](https://npmjs.com/package/moonstone-wrapper)
+# Moonstone [![NPM version](https://img.shields.io/npm/v/moonstone-wrapper.svg?style=flat-square&color=informational)](https://npmjs.com/package/moonstone-wrapper) [![Discord Server](https://img.shields.io/discord/839181209958350929?color=7289da&logo=discord&logoColor=white&style=flat-square)](https://discord.gg/eEm4ttXyym) [![NPM Downloads](https://img.shields.io/npm/dt/moonstone-wrapper.svg?style=flat-square&color=informational)](https://npmjs.com/package/moonstone-wrapper)
 
 A simple, standalone, [dogehouse.tv](https://dogehouse.tv/) API wrapper
 
