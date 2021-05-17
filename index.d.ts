@@ -1,5 +1,5 @@
 import EventEmitter from "events";
-const { Writable } = require("stream");
+import { Writable } from "stream";
 
 declare function Moonstone(
   token:
@@ -21,15 +21,15 @@ declare namespace Moonstone {
     pingInterval?: number;
   }
 
-  declare type chatTokenArray = Array<{ type: string; value: string }>;
-  declare type chatMessageBuilder = {
-    text: (text: String) => chatMessageBuilder;
+  type chatTokenArray = Array<{ type: string; value: string }>;
+  type chatMessageBuilder = {
+    text: (text: string) => chatMessageBuilder;
     mention: (user: User) => chatMessageBuilder;
-    mentionUsername: (username: String) => chatMessageBuilder;
-    emote: (emote: String) => chatMessageBuilder;
-    emoji: (emoji: String) => chatMessageBuilder;
-    link: (link: String) => chatMessageBuilder;
-    url: (link: String) => chatMessageBuilder;
+    mentionUsername: (username: string) => chatMessageBuilder;
+    emote: (emote: string) => chatMessageBuilder;
+    emoji: (emoji: string) => chatMessageBuilder;
+    link: (link: string) => chatMessageBuilder;
+    url: (link: string) => chatMessageBuilder;
   };
 
   export class Client extends EventEmitter {
@@ -64,7 +64,7 @@ declare namespace Moonstone {
     }): Promise<User>;
     setUserAuthLevel(
       user: ActiveUser,
-      level: keyof Constants.AuthLevel
+      level: keyof Constants["AuthLevel"]
     ): Promise<void>;
     on: EventListeners<this>;
   }
@@ -89,20 +89,20 @@ declare namespace Moonstone {
   }
 
   export class User {
-    id: String;
-    username: String;
-    avatarUrl: String;
-    bannerUrl?: String;
-    bio: String;
+    id: string;
+    username: string;
+    avatarUrl: string;
+    bannerUrl?: string;
+    bio: string;
     online: Boolean;
-    lastOnline: String;
-    currentRoomId?: String;
-    displayName: String;
+    lastOnline: string;
+    currentRoomId?: string;
+    displayName: string;
     numFollowing: Number;
     numFollowers: Number;
     youAreFollowing: Boolean;
     followsYou: Boolean;
-    botOwnerId?: String;
+    botOwnerId?: string;
   }
 
   export class ActiveUser extends User {
@@ -116,21 +116,22 @@ declare namespace Moonstone {
     isCreator: Boolean;
     selfUser: User;
     sendWhisper(
-      string:
-        | content
+      content:
+        | string
         | ((builder: chatMessageBuilder) => chatMessageBuilder)
         | chatTokenArray
     ): Promise<void>;
     setAsListener(): Promise<void>;
     setAsSpeaker(): Promise<void>;
-    setAuthLevel(level: keyof Constants.AuthLevel): Promise<void>;
+    setAuthLevel(level: keyof Constants["AuthLevel"]): Promise<void>;
   }
 
   export class Room {
-    name: String;
-    description: String;
+    id: string;
+    name: string;
+    description: string;
     isPrivate: Boolean;
-    insertedAt: String;
+    insertedAt: string;
   }
 
   export class ActiveRoom extends Room {
@@ -148,17 +149,20 @@ declare namespace Moonstone {
   }
 
   export class Message {
-    userId: String;
+    userId: string;
     user: ActiveUser;
     room: ActiveRoom;
     tokens: Array<Object>;
-    sentAt: String;
+    sentAt: string;
     isWhisper: Boolean;
     isPrivate: Boolean;
-    content: String;
+    content: string;
   }
 
-  export class AudioDispatcher extends Writable implements VolumeInterface {
+  type Constructable<T> = new (...args: any[]) => T;
+  function VolumeMixin<T>(base: Constructable<T>): Constructable<T & VolumeInterface>;
+
+  export class AudioDispatcher extends VolumeMixin(Writable) {
     player: AudioPlayer;
     paused: boolean;
     pausedTime: number;
@@ -239,6 +243,8 @@ declare namespace Moonstone {
     highWaterMark?: number;
   }
 
+  type StreamType = 'unknown' | 'converted' | 'opus' | 'ogg/opus' | 'webm/opus';
+
   interface VolumeInterface {
     volumeEditable: boolean;
     volume: number;
@@ -250,9 +256,9 @@ declare namespace Moonstone {
   }
 
   type CreateBotReply = {
-    apiKey?: String;
+    apiKey?: string;
     isUsernameTaken?: Boolean;
-    error?: String;
+    error?: string;
   };
 
   interface Constants {
