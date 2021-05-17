@@ -27,7 +27,7 @@ declare namespace Moonstone {
     mention: (user: User) => chatMessageBuilder;
     mentionUsername: (username: String) => chatMessageBuilder;
     emote: (emote: String) => chatMessageBuilder;
-    emoji: (emote: String) => chatMessageBuilder;
+    emoji: (emoji: String) => chatMessageBuilder;
     link: (link: String) => chatMessageBuilder;
     url: (link: String) => chatMessageBuilder;
   };
