@@ -48,10 +48,10 @@ bot.on("newChatMsg", (msg) => {
 bot.connect(); // Get the bot to connect to Dogehouse
 ```
 
-More examples can be found in [the examples folder](https://github.com/fuwwy/moonstone/tree/main/examples).
+More examples can be found in [the examples folder](https://github.com/fuwwy/moonstone/tree/main/docs/examples).
 
-- [Welcomer Example](https://github.com/fuwwy/moonstone/blob/main/examples/welcomer.js)
-- [Music Example](https://github.com/fuwwy/moonstone/blob/main/examples/music.js)
+- [Welcomer Example](https://github.com/fuwwy/moonstone/blob/main/docs/examples/welcomer.js)
+- [Music Example](https://github.com/fuwwy/moonstone/blob/main/docs/examples/music.js)
 
 ## Support
 
@@ -70,3 +70,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - [fuwwy](https://github.com/fuwwy)
 - [Isaiah-Hamilton](https://github.com/Isaiah-Hamilton)
 - [1chiSensei](https://github.com/1chiSensei)
+- [KhaledCP](https://github.com/KhaledCP/)
